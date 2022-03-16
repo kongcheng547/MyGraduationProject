@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/cmake-build-debug/
+cmake_ninja_workdir = /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/cmake-build-debug/
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/cmake-build-debug && /cygdrive/c/Users/kongcheng547/AppData/Local/JetBrains/CLion2021.3/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/cmake-build-debug && /cygdrive/c/Users/kongcheng547/AppData/Local/JetBrains/CLion2021.3/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -56,7 +56,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/cmake-build-debug && /cygdrive/c/Users/kongcheng547/AppData/Local/JetBrains/CLion2021.3/cygwin_cmake/bin/cmake.exe --regenerate-during-build -S/cygdrive/e/学习资料/毕业设计/代码参考/StepReader -B/cygdrive/e/学习资料/毕业设计/代码参考/StepReader/cmake-build-debug
+  COMMAND = cd /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/cmake-build-debug && /cygdrive/c/Users/kongcheng547/AppData/Local/JetBrains/CLion2021.3/cygwin_cmake/bin/cmake.exe --regenerate-during-build -S/cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader -B/cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -72,85 +72,85 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_StepReader: phony || CMakeFiles/StepReader.dir
 
-build CMakeFiles/StepReader.dir/main.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/main.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/main.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/main.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir
 
-build CMakeFiles/StepReader.dir/StepClass/SuperEntity.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/StepClass/SuperEntity.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/StepClass/SuperEntity.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/StepClass/SuperEntity.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/StepClass/SuperEntity.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir/StepClass
 
-build CMakeFiles/StepReader.dir/StepClass/GeomEntity/ManifoldSolidBrep.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/StepClass/GeomEntity/ManifoldSolidBrep.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/StepClass/GeomEntity/ManifoldSolidBrep.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/StepClass/GeomEntity/ManifoldSolidBrep.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/StepClass/GeomEntity/ManifoldSolidBrep.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir/StepClass/GeomEntity
 
-build CMakeFiles/StepReader.dir/StepClass/GeomEntity/Point.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/StepClass/GeomEntity/Point.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/StepClass/GeomEntity/Point.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/StepClass/GeomEntity/Point.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/StepClass/GeomEntity/Point.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir/StepClass/GeomEntity
 
-build CMakeFiles/StepReader.dir/StepClass/GeomEntity/Curve.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/StepClass/GeomEntity/Curve.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/StepClass/GeomEntity/Curve.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/StepClass/GeomEntity/Curve.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/StepClass/GeomEntity/Curve.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir/StepClass/GeomEntity
 
-build CMakeFiles/StepReader.dir/StepClass/GeomEntity/Surface.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/StepClass/GeomEntity/Surface.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/StepClass/GeomEntity/Surface.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/StepClass/GeomEntity/Surface.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/StepClass/GeomEntity/Surface.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir/StepClass/GeomEntity
 
-build CMakeFiles/StepReader.dir/StepClass/TopoEntity/Vertex.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/StepClass/TopoEntity/Vertex.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/StepClass/TopoEntity/Vertex.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/StepClass/TopoEntity/Vertex.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/StepClass/TopoEntity/Vertex.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir/StepClass/TopoEntity
 
-build CMakeFiles/StepReader.dir/StepClass/TopoEntity/Edge.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/StepClass/TopoEntity/Edge.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/StepClass/TopoEntity/Edge.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/StepClass/TopoEntity/Edge.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/StepClass/TopoEntity/Edge.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir/StepClass/TopoEntity
 
-build CMakeFiles/StepReader.dir/StepClass/TopoEntity/Loop.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/StepClass/TopoEntity/Loop.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/StepClass/TopoEntity/Loop.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/StepClass/TopoEntity/Loop.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/StepClass/TopoEntity/Loop.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir/StepClass/TopoEntity
 
-build CMakeFiles/StepReader.dir/StepClass/TopoEntity/Face.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/StepClass/TopoEntity/Face.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/StepClass/TopoEntity/Face.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/StepClass/TopoEntity/Face.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/StepClass/TopoEntity/Face.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir/StepClass/TopoEntity
 
-build CMakeFiles/StepReader.dir/StepClass/TopoEntity/ClosedShell.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/StepClass/TopoEntity/ClosedShell.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/StepClass/TopoEntity/ClosedShell.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/StepClass/TopoEntity/ClosedShell.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/StepClass/TopoEntity/ClosedShell.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir/StepClass/TopoEntity
 
-build CMakeFiles/StepReader.dir/ReadFile/FileReader.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/ReadFile/FileReader.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/ReadFile/FileReader.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/ReadFile/FileReader.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/ReadFile/FileReader.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir/ReadFile
 
-build CMakeFiles/StepReader.dir/ReadFile/StepFile.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/ReadFile/StepFile.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/ReadFile/StepFile.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/ReadFile/StepFile.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/ReadFile/StepFile.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
   OBJECT_FILE_DIR = CMakeFiles/StepReader.dir/ReadFile
 
-build CMakeFiles/StepReader.dir/Util/Util.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/Util/Util.cpp || cmake_object_order_depends_target_StepReader
+build CMakeFiles/StepReader.dir/Util/Util.cpp.o: CXX_COMPILER__StepReader_Debug /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/Util/Util.cpp || cmake_object_order_depends_target_StepReader
   DEP_FILE = CMakeFiles/StepReader.dir/Util/Util.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/StepReader.dir
@@ -185,7 +185,7 @@ build StepReader: phony StepReader.exe
 # =============================================================================
 
 #############################################
-# Folder: /cygdrive/e/学习资料/毕业设计/代码参考/StepReader/cmake-build-debug
+# Folder: /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/cmake-build-debug
 
 build all: phony StepReader.exe
 

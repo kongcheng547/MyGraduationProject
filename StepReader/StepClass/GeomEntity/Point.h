@@ -6,7 +6,7 @@
 #define STEPREADER_POINT_H
 
 #include "iostream"
-#include "..\SuperEntity.h"
+#include "../SuperEntity.h"
 #include "string"
 
 using namespace std;
@@ -27,6 +27,9 @@ public:
         this->y = y;
         this->z = z;
     }
+
+    CartesianPoint(string name) : Point(name){}
+    static CartesianPoint handle(string fileRow, map<string, string> dataMap);
 
 };
 

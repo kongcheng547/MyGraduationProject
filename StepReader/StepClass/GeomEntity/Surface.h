@@ -28,13 +28,14 @@ public:
     Axis2Placement3D(string name, CartesianPoint locPoint1, Direction normalLine,
                      Direction referenceDirection) : Surface(name), locPoint(locPoint1), normal(normalLine),
                                                      referenceDirection(referenceDirection) {}
+    static Axis2Placement3D handle(string fileRow, map<string, string> dataMap);
 };
 
 class Plane : public ElementarySurface {
 public:
     Axis2Placement3D axisPlane;
     Plane(string name, Axis2Placement3D axis2Placement3D) : ElementarySurface(name), axisPlane(axis2Placement3D){}
-
+    static Plane handle(string fileRow, map<string, string> dataMap);
 };
 
 class SweptSurface : public ElementarySurface {

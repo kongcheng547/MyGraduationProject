@@ -42,7 +42,7 @@ rule CXX_EXECUTABLE_LINKER__StepReader_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /cygdrive/c/Users/kongcheng547/AppData/Local/JetBrains/CLion2021.3/cygwin_cmake/bin/cmake.exe --regenerate-during-build -S/cygdrive/e/学习资料/毕业设计/代码参考/StepReader -B/cygdrive/e/学习资料/毕业设计/代码参考/StepReader/cmake-build-debug
+  command = /cygdrive/c/Users/kongcheng547/AppData/Local/JetBrains/CLion2021.3/cygwin_cmake/bin/cmake.exe --regenerate-during-build -S/cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader -B/cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 

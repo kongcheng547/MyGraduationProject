@@ -11,4 +11,5 @@ add_executable(StepReader main.cpp
         StepClass/TopoEntity/Vertex.cpp StepClass/TopoEntity/Vertex.h StepClass/TopoEntity/Edge.cpp
         StepClass/TopoEntity/Edge.h StepClass/TopoEntity/Loop.cpp StepClass/TopoEntity/Loop.h
         StepClass/TopoEntity/Face.cpp StepClass/TopoEntity/Face.h StepClass/TopoEntity/ClosedShell.cpp
-        StepClass/TopoEntity/ClosedShell.h ReadFile/FileReader.cpp ReadFile/FileReader.h ReadFile/StepFile.cpp ReadFile/StepFile.h Util/Util.cpp Util/Util.h)
+        StepClass/TopoEntity/ClosedShell.h ReadFile/FileReader.cpp ReadFile/FileReader.h ReadFile/StepFile.cpp
+        ReadFile/StepFile.h Util/Util.cpp Util/Util.h)

@@ -22,6 +22,8 @@ public:
         this->y = y;
         this->z = z;
     }
+
+    static Direction handle(string fileRow, map<string, string> dataMap);
 };
 
 class Vector : public GeometricRepresentationItem {
@@ -33,15 +35,18 @@ public:
                                                                direction(direction1) {
         this->length = length;
     }
+
+    static Vector handle(string fileRow, map<string, string> dataMap);
 };
 
 class Line : public Curve {
 public:
-    Vector vector;
+    Vector vec;
     CartesianPoint cartesianPoint;
 
-    Line(string name, Vector vector1, CartesianPoint cartesianPoint1) : Curve(name), vector(vector1),
+    Line(string name, CartesianPoint cartesianPoint1, Vector vector1) : Curve(name), vec(vector1),
                                                                         cartesianPoint(cartesianPoint1) {}
+    static Line handle(string fileRow, map<string, string> dataMap);
 };
 
 class Conic : public Curve {

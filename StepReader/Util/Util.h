@@ -7,8 +7,20 @@
 #include "string"
 #include "iostream"
 #include "vector"
+#include "sstream"
+
 
 using namespace std;
+//模板函数：将string类型变量转换为常用的数值类型（此方法具有普遍适用性）
+template <class Type>
+Type stringToNum(const string& str)
+{
+    istringstream iss(str);
+    Type num;
+    iss >> num;
+    return num;
+}
+
 class Util {
 public:
     // 对字符串根据符号分割
