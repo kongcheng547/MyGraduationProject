@@ -14,8 +14,10 @@ public:
 
 class VertexPoint : public Vertex {
 public:
-    CartesianPoint cartesianPoint;
-    VertexPoint(string name, CartesianPoint cartesianPoint1) : Vertex(name), cartesianPoint(cartesianPoint1) {}
+    CartesianPoint locPoint;
+    VertexPoint(string name, CartesianPoint cartesianPoint1) : Vertex(name), locPoint(cartesianPoint1) {}
+
+    static VertexPoint handle(string fileRow, map<string, string> dataMap);
 };
 
 

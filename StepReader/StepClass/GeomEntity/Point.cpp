@@ -7,7 +7,7 @@
 //#28 = CARTESIAN_POINT ( 'NONE',  ( -60.54135500900765300, 39.41482248636472000, 0.0000000000000000000 ) )
 CartesianPoint CartesianPoint::handle(string fileRow, map<string, string> dataMap) {
     if (fileRow.find("CARTESIAN_POINT") == string::npos) {
-        cout << "本条" + fileRow + "不是笛卡尔点，请检查文件格式";
+        cout << "本条" + fileRow + "不是笛卡尔点，请检查文件格式" << endl;
         getchar();
         exit(0);
     }

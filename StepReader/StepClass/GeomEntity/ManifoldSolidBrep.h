@@ -14,6 +14,7 @@ public:
 
     ManifoldSolidBrep(string name, ClosedShell closedShell1) : GeometricRepresentationItem(name),
                                                                closedShell(closedShell1) {}
+    static ManifoldSolidBrep handle(string fileRow, map<string, string> dataMap);
 };
 
 

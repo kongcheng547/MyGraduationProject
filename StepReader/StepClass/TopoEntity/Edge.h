@@ -17,15 +17,17 @@ public:
 class EdgeCurve : public Edge {
 public:
     VertexPoint startPoint, endPoint;
-    Curve curve;
+    Line line;
     bool isTheSameDir;
-
-    EdgeCurve(string name, VertexPoint start, VertexPoint end, Curve curve1, bool isTheSame) : Edge(name),
+    // TODO:暂时先全都用line代替，后面记得要改
+    EdgeCurve(string name, VertexPoint start, VertexPoint end, Line line, bool isTheSame) : Edge(name),
                                                                                                startPoint(start),
                                                                                                endPoint(end),
-                                                                                               curve(curve1) {
+                                                                                               line(line) {
         this->isTheSameDir = isTheSame;
     }
+
+    static EdgeCurve handle(string fileRow, map<string, string> dataMap);
 };
 
 class OrientedEdge : public Edge {
@@ -36,6 +38,8 @@ public:
     OrientedEdge(string name, EdgeCurve edgeCurve1, bool isTheSame) : Edge(name), edgeCurve(edgeCurve1) {
         this->isTheSameDir = isTheSame;
     }
+
+    static OrientedEdge handle(string fileRow, map<string, string> dataMap);
 };
 
 #endif //STEPREADER_EDGE_H

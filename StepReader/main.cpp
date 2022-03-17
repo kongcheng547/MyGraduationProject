@@ -3,7 +3,8 @@
 #include "ReadFile/StepFile.h"
 #include "StepClass/SuperEntity.h"
 #include "StepClass/GeomEntity/Point.h"
-#include "StepClass/GeomEntity/Surface.h"
+#include "StepClass/GeomEntity/ManifoldSolidBrep.h"
+#include "StepClass/TopoEntity/ClosedShell.h"
 using namespace std;
 
 int main() {
@@ -11,6 +12,6 @@ int main() {
     StepFile stepFile;
     stepFile.readFile(filePath);
     stepFile.handleData();
-    Plane plane = Plane::handle(stepFile.dataMap.find("#194")->second, stepFile.dataMap);
+    ManifoldSolidBrep manifoldSolidBrep = ManifoldSolidBrep::handle(stepFile.dataMap.find("#3")->second, stepFile.dataMap);
     return 0;
 }

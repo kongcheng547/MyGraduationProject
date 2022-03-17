@@ -23,6 +23,7 @@ class EdgeLoop : public Loop {
 public:
     vector<OrientedEdge> orientedEdgeVector;
     EdgeLoop(string name, vector<OrientedEdge> vector1) : Loop(name), orientedEdgeVector(vector1) {}
+    static EdgeLoop handle(string fileRow, map<string, string> dataMap);
 };
 
 class PolyLoop : public Loop {

@@ -9,8 +9,11 @@
 
 class ClosedShell : public TopologicalRepresentationItem{
 public:
-    vector<Face> faceVector;
-    ClosedShell(string name, vector<Face> faceVector1) : TopologicalRepresentationItem(name), faceVector(faceVector1) {}
+    // TODO:先用advancedFace做代替
+    vector<AdvancedFace> faceVector;
+    ClosedShell(string name, vector<AdvancedFace> faceVector1) : TopologicalRepresentationItem(name), faceVector(faceVector1) {}
+
+    static ClosedShell handle(string fileRow, map<string, string> dataMap);
 };
 
 

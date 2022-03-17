@@ -11,6 +11,7 @@
 class Curve : public GeometricRepresentationItem {
 public:
     Curve(string name) : GeometricRepresentationItem(name) {}
+
 };
 
 class Direction : public GeometricRepresentationItem {

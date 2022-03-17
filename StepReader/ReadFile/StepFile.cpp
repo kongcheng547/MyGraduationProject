@@ -57,6 +57,7 @@ void StepFile::handleData() {
         if (line.find("MANIFOLD_SOLID_BREP") != string::npos) {
             this->manifoldString.push_back(tempStringVec[0]);
         }
-        this->dataMap.insert(pair<string,string>(tempStringVec[0], tempStringVec[1]));
+        // dataMap key是每行的标号，带#号，value是整行去掉空格之后的结果
+        this->dataMap.insert(pair<string,string>(tempStringVec[0], line));
     }
 }
