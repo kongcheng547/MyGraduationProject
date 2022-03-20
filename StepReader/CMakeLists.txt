@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 2.30)
 project(StepReader)
 
+INCLUDE_DIRECTORIES(include)
+link_directories(lib/x64)
+
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(StepReader main.cpp
@@ -12,4 +15,7 @@ add_executable(StepReader main.cpp
         StepClass/TopoEntity/Edge.h StepClass/TopoEntity/Loop.cpp StepClass/TopoEntity/Loop.h
         StepClass/TopoEntity/Face.cpp StepClass/TopoEntity/Face.h StepClass/TopoEntity/ClosedShell.cpp
         StepClass/TopoEntity/ClosedShell.h ReadFile/FileReader.cpp ReadFile/FileReader.h ReadFile/StepFile.cpp
-        ReadFile/StepFile.h Util/Util.cpp Util/Util.h)
+        ReadFile/StepFile.h Util/Util.cpp Util/Util.h DrawFile/Draw.cpp)
+
+target_link_libraries(StepReader libopengl32.a libfreeglut.a glu32.dll) #链接对应的库文件
+#target_link_libraries(StepReader libopengl32.a libfreeglut.a freeglut.dll) #链接对应的库文件
