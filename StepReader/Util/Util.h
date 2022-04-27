@@ -36,12 +36,12 @@ public:
     }
 
     // 清空字符串所有空格
-    std::string& clearAllSpace(std::string &str)
+    std::string& clearSelectedChar(std::string &str, char c)
     {
         int index = 0;
         if (!str.empty())
         {
-            while ((index = str.find(' ', index)) != std::string::npos)
+            while ((index = str.find(c, index)) != std::string::npos)
             {
                 str.erase(index, 1);
             }

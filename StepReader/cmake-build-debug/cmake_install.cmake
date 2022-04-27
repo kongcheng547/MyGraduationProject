@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader
+# Install script for directory: /cygdrive/d/Language/C++/MyGraduationProject/StepReader
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/cygdrive/e/学习资料/毕业设计/MyGraduationProject/StepReader/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

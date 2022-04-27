@@ -47,11 +47,12 @@ void StepFile::readFile(string filePath) {
 void StepFile::handleData() {
     vector<string> dataStringVector;
     Util util;
-    util.split(this->data, dataStringVector, '\r');
+    util.split(this->data, dataStringVector, ';');
     unsigned long len = dataStringVector.size();
-    for (int i = 0; i < len; i++) {
-        string line = util.clearAllSpace(dataStringVector[i]);
-        line = line.substr(0, line.length() - 1);
+    for (int i = 0; i < len - 1; i++) {
+        string line1 = util.clearSelectedChar(dataStringVector[i], ' ');
+        string line = util.clearSelectedChar(line1, '\r');
+//        line = line.substr(0, line.length() - 1);
         vector<string> tempStringVec;
         util.split(line, tempStringVec, '=');
         if (line.find("MANIFOLD_SOLID_BREP") != string::npos) {

@@ -11,6 +11,7 @@
 #include "map"
 #include "fstream"
 #include "../Util/Util.h"
+#include "../StepClass/GeomEntity/ManifoldSolidBrep.h"
 
 using namespace std;
 class StepFile {
@@ -20,6 +21,7 @@ public:
     string data;
     map<string, string> dataMap;
     vector<string> manifoldString;
+    vector<ManifoldSolidBrep> manifoldSolidBrepVec;
     StepFile() = default;
     void readFile(string filePath);
     void handleData();
