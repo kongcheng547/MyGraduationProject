@@ -1,0 +1,75 @@
+NIST STEP File Analyzer and Viewer 4.72 (Wed Apr 27 16:31:14 CST 2022)
+
+Opening STEP AP214 file
+ 825550 entities
+ 
+Generating Header worksheet
+Name:  elevator
+FileDirectory:  D:\Language\C++\MyGraduationProject\StepReader\src\
+FileDescription:  STEP AP214
+FileImplementationLevel:  1
+ ** FileImplementationLevel is usually '2;1'.  See Header worksheet.  [addHeaderWorksheet]
+FileTimeStamp:  2022-04-04T09:27:27
+FileAuthor:  
+FileOrganization:  
+FilePreprocessorVersion:  SwSTEP 2.0
+FileOriginatingSystem:  SolidWorks 2019
+FileAuthorisation:  
+SchemaName:  AUTOMOTIVE_DESIGN
+ 
+Generating STEP Entity worksheets
+colour_rgb (1000 of 3527)
+ **  Maximum Rows (1000) exceeded (see Spreadsheet tab)
+fill_area_style (1000 of 3527)
+fill_area_style_colour (1000 of 3527)
+presentation_layer_assignment (1000 of 3527)
+presentation_style_assignment (1000 of 3527)
+styled_item (1000 of 3527)
+surface_side_style (1000 of 3527)
+surface_style_fill_area (1000 of 3527)
+surface_style_usage (1000 of 3527)
+advanced_brep_shape_representation (128)
+context_dependent_shape_representation (541)
+(geometric_representation_context)(global_uncertainty_assigned_context)(global_unit_assigned_context) (1000 of 3724)
+item_defined_transformation (541)
+manifold_surface_shape_representation (3)
+mechanical_design_geometric_presentation_representation (1000 of 3527)
+(representation_relationship_with_transformation)(shape_representation_relationship) (541)
+shape_definition_representation (197)
+shape_representation (197)
+shape_representation_relationship (131)
+application_context (394)
+application_protocol_definition (394)
+next_assembly_usage_occurrence (541)
+product (197)
+product_context (197)
+product_definition (197)
+product_definition_context (197)
+product_definition_formation_with_specified_source (197)
+product_definition_shape (738)
+product_related_product_category (197)
+(length_unit)(si_unit) (1000 of 3724)
+(plane_angle_unit)(si_unit) (1000 of 3724)
+(si_unit)(solid_angle_unit) (1000 of 3724)
+uncertainty_measure_with_unit (1000 of 3724)
+ Writing Viewer file to: D:\Language\C++\MyGraduationProject\StepReader\src\elevator-sfa.html
+ **  Copying Viewer software for part geometry (stp2x3d-part.exe) to C:\Users\kongcheng547\AppData\Local\Temp\SFA
+ Processing STEP part geometry.  Please wait, it could take several minutes for large STEP files.
+ Processing X3D output
+ ** The list of Assembly/Part names in the Viewer might have some wrong characters.  This is due to the
+ ** encoding of the STEP file.  If possible convert the encoding of the STEP file to UTF-8 with the
+ ** Notepad++ text editor or other software.  See Text Strings and Numbers  [x3dBrepGeom]
+
+Generating Summary worksheet
+Formatting Worksheets
+Processing time: 115 seconds
+ 
+Saving Spreadsheet to:
+ D:\Language\C++\MyGraduationProject\StepReader\src\elevator-sfa.xlsx
+
+Opening Spreadsheet: elevator-sfa.xlsx
+
+Opening Viewer file: elevator-sfa.html (20 MB)
+
+Saving Log file to:
+ D:\Language\C++\MyGraduationProject\StepReader\src\elevator-sfa.log

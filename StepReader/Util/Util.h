@@ -8,6 +8,7 @@
 #include "iostream"
 #include "vector"
 #include "sstream"
+#include "stack"
 
 
 using namespace std;
@@ -35,7 +36,7 @@ public:
         }
     }
 
-    // 清空字符串所有空格
+    // 清空字符串所有指定符号
     std::string& clearSelectedChar(std::string &str, char c)
     {
         int index = 0;
@@ -47,6 +48,63 @@ public:
             }
         }
         return str;
+    }
+
+    // 处理row里面的double字符串
+    double DoubleStringHandle(string doubleString) {
+        int removeNum = 0;
+        // 如果是最后一个，会带有)
+        if (doubleString[doubleString.length() - 1] == ')') {
+            removeNum++;
+        }
+        // 如果是2. 代表是2.0，去掉.
+        if (doubleString[doubleString.length() - 1] == '.') {
+            removeNum++;
+        }
+        doubleString = doubleString.substr(0, doubleString.length() - removeNum);
+        return stringToNum<double>(doubleString);
+    }
+
+    // 找到字符串里面匹配的小括号，返回左括号位置和到右括号的字符数目
+    vector<vector<int>> findBracketsVec(string basicString) {
+        vector<vector<int>> bracketsMatch;
+        stack<int> s;
+        int bracketNum = 0;
+        for (int i = 0; i < basicString.length(); i++) {
+            if (basicString[i] == '(') {
+                s.push(bracketNum++);
+                vector<int> temp;
+                temp.push_back(i);
+                bracketsMatch.push_back(temp);
+            } else if (basicString[i] == ')') {
+                int loc = s.top();
+                s.pop();
+                bracketsMatch[loc].push_back(i - bracketsMatch[loc][0] + 1);
+            }
+        }
+        return bracketsMatch;
+    }
+
+    // 将4,4这样的字符串转为vector存储
+    vector<int> handleIntString(string intString) {
+        vector<int> intVec;
+        vector<string> tempVec;
+        this->split(intString, tempVec, ',');
+        for (int i = 0; i < tempVec.size(); i++) {
+            intVec.push_back(stringToNum<int>(tempVec[i]));
+        }
+        return intVec;
+    }
+
+    // 将4.0,4.1这样的字符串转为vector存储
+    vector<double> handleDoubleString(string doubleString) {
+        vector<double> doubleVec;
+        vector<string> tempVec;
+        this->split(doubleString, tempVec, ',');
+        for (int i = 0; i < tempVec.size(); i++) {
+            doubleVec.push_back(stringToNum<double>(tempVec[i]));
+        }
+        return doubleVec;
     }
 };
 

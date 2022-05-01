@@ -7,37 +7,12 @@
 
 #include "../SuperEntity.h"
 #include "Point.h"
+#include "MiddleGeom.h"
 
 class Curve : public GeometricRepresentationItem {
 public:
     Curve(string name) : GeometricRepresentationItem(name) {}
 
-};
-
-class Direction : public GeometricRepresentationItem {
-public:
-    double x, y, z;
-
-    Direction(string name, double x, double y, double z) : GeometricRepresentationItem(name) {
-        this->x = x;
-        this->y = y;
-        this->z = z;
-    }
-
-    static Direction handle(string fileRow, map<string, string> dataMap);
-};
-
-class Vector : public GeometricRepresentationItem {
-public:
-    Direction direction;
-    double length;
-
-    Vector(string name, Direction direction1, double length) : GeometricRepresentationItem(name),
-                                                               direction(direction1) {
-        this->length = length;
-    }
-
-    static Vector handle(string fileRow, map<string, string> dataMap);
 };
 
 class Line : public Curve {
@@ -51,10 +26,112 @@ public:
 };
 
 class Conic : public Curve {
+public:
+    Axis2Placement3D position;
+    Conic(string name, Axis2Placement3D position) : Curve(name), position(position) {}
+};
+
+//Ô²
+class Circle : public Conic {
+public:
+    double radius;
+    Circle(string name, Axis2Placement3D position, double radius) : Conic(name, position), radius(radius) {}
+
+    static Circle handle(string fileRow, map<string, string> dataMap);
+};
+
+// ÍÖÔ²
+class Ellipse : public Conic {
+public:
+    double semiAxis1, semiAxis2;
+    Ellipse(string name, Axis2Placement3D position, double semiAxis1, double semiAxis2)
+    : Conic(name, position),semiAxis1(semiAxis1), semiAxis2(semiAxis2) {}
+
+    static Ellipse handle(string fileRow, map<string, string> dataMap);
+};
+
+// Ë«ÇúÏß
+class Hyperbola : public Conic {
+public:
+    // ÊµÖáºÍÐéÖá
+    double semiAxis, semiImagAxis;
+    Hyperbola(string name, Axis2Placement3D position, double semiAxis, double SemiImagAxis) : Conic(name, position),
+    semiAxis(semiAxis), semiImagAxis(semiImagAxis) {}
+
+    static Hyperbola handle(string fileRow, map<string, string> dataMap);
+};
+
+// Å×ÎïÏß
+class Parabola : public Conic {
+public:
+    // ½¹¾à
+    double focalDist;
+    Parabola(string name, Axis2Placement3D position, double focalDist) : Conic(name, position), focalDist(focalDist) {}
+
+    static Parabola handle(string fileRow, map<string, string> dataMap);
+};
+
+class Clothoid : public Curve {
+
+};
+
+class CircularInvolute : public Curve {
 
 };
 
 class Pcurve : public Curve{
+
+};
+
+
+class BoundedCurve : public Curve {
+public:
+    BoundedCurve(string name) : Curve(name) {}
+};
+class Polyline : public BoundedCurve {
+
+};
+
+class BSplineCurve : public BoundedCurve {
+
+};
+class UniformCurve : public BSplineCurve {
+
+};
+class BSplineCurveWithKnots : public BSplineCurve {
+
+};
+class QuasiUniformCurve : public  BSplineCurve {
+
+};
+class BezierCurve : public BSplineCurve {
+
+};
+class RationalBSplineCurve : public BSplineCurve {
+
+};
+
+class TrimmedCurve : public BoundedCurve {
+
+};
+class BoundedPcurve : public BoundedCurve, public Pcurve{
+
+};
+class BoundedSurfaceCurve : public BoundedCurve {
+
+};
+class CompositeCurve : public BoundedCurve {
+
+};
+class LocallyRefinedSplineCurve : public BoundedCurve {
+
+};
+
+class SurfaceCurve : public Curve {
+
+};
+
+class OffsetCurve2D : public Curve {
 
 };
 
