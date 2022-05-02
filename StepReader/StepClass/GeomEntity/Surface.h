@@ -107,6 +107,17 @@ public:
                                                                        surfaceForm(surfaceForm), u_closed(u_closed),
                                                                        v_closed(v_closed),
                                                                        selfIntersect(selfIntersect) {}
+
+    BSplineSurface(string name, BSplineSurface const &bSplineSurface) : BoundedSurface(name) {
+        uDegree = bSplineSurface.uDegree;
+        vDegree = bSplineSurface.vDegree;
+        controlPointsList = bSplineSurface.controlPointsList;
+        surfaceForm = bSplineSurface.surfaceForm;
+        u_closed = bSplineSurface.u_closed;
+        v_closed = bSplineSurface.v_closed;
+        selfIntersect = bSplineSurface.selfIntersect;
+    }
+
     static BSplineSurface handle(string fileRow, map<string, string> dataMap);
 
 };
@@ -116,11 +127,45 @@ public:
     vector<int> u_multiplicities, v_multiplicities;
     vector<double> u_knots, v_knots;
     string knot_spec;
-    BSplineSurfaceWithKnots(string name, vector<int> u_multiplicities, vector<int> v_multiplicities, vector<double> u_knots,
-                            vector<double> v_knots, string knot_spec) : BSplineSurface(name), u_multiplicities(u_multiplicities),
-                                                                        v_multiplicities(v_multiplicities), u_knots(u_knots),
+
+    BSplineSurfaceWithKnots(string name, vector<int> u_multiplicities, vector<int> v_multiplicities,
+                            vector<double> u_knots,
+                            vector<double> v_knots, string knot_spec) : BSplineSurface(name),
+                                                                        u_multiplicities(u_multiplicities),
+                                                                        v_multiplicities(v_multiplicities),
+                                                                        u_knots(u_knots),
                                                                         v_knots(v_knots), knot_spec(knot_spec) {}
+
+    BSplineSurfaceWithKnots(BSplineSurface bSplineSurface, vector<int> u_multiplicities, vector<int> v_multiplicities,
+                            vector<double> u_knots,
+                            vector<double> v_knots, string knot_spec) : BSplineSurface(bSplineSurface.name,
+                                                                                       bSplineSurface),
+                                                                        u_multiplicities(u_multiplicities),
+                                                                        v_multiplicities(v_multiplicities),
+                                                                        u_knots(u_knots),
+                                                                        v_knots(v_knots), knot_spec(knot_spec) {}
+
     static BSplineSurfaceWithKnots handle(string fileRow, map<string, string> dataMap);
+};
+
+class RationalBSplineSurface : public BSplineSurface {
+public:
+    vector<vector<double>> weights;
+    RationalBSplineSurface(string name, vector<vector<double>> weights) : BSplineSurface(name), weights(weights) {}
+
+    static RationalBSplineSurface handle(string fileRow, map<string, string> dataMap);
+};
+
+class BSplineSurfaceSet : public BoundedSurface {
+public:
+    BSplineSurface bSplineSurface;
+    BSplineSurfaceWithKnots bSplineSurfaceWithKnots;
+    RationalBSplineSurface rationalBSplineSurface;
+    BSplineSurfaceSet(string name, BSplineSurface bSplineSurface, BSplineSurfaceWithKnots bSplineSurfaceWithKnots,
+                      RationalBSplineSurface rationalBSplineSurface) : BoundedSurface(name), bSplineSurface(bSplineSurface),
+                                                                       bSplineSurfaceWithKnots(bSplineSurfaceWithKnots),
+                                                                       rationalBSplineSurface(rationalBSplineSurface) {}
+    static BSplineSurfaceSet handle(string fileRow, map<string, string> dataMap);
 };
 
 class OffsetSurface : public Surface {
