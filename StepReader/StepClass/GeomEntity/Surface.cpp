@@ -137,7 +137,6 @@ BSplineSurface BSplineSurface::handle(string fileRow, map<string, string> dataMa
     for (int i = tempSplitVec[0].length() - 1; tempSplitVec[0][i] >= '0' && tempSplitVec[0][i] <= '9' && i >= 0; i--) {
         numLoc = i;
     }
-    // TODO 此处的n有待改正
     int u_degree = stringToNum<int>(tempSplitVec[0].substr(numLoc, tempSplitVec[0].length()));
     int v_degree = stringToNum<int>(tempSplitVec[1]);
     vector<vector<CartesianPoint>> controlPointsList;

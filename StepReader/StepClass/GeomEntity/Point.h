@@ -30,6 +30,7 @@ public:
 
     CartesianPoint(string name) : Point(name){}
     static CartesianPoint handle(string fileRow, map<string, string> dataMap);
+    static int num;
 
 };
 

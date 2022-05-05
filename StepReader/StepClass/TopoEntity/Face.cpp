@@ -4,9 +4,10 @@
 
 #include "Face.h"
 
+//#235202 = FACE_BOUND ( 'NONE', #750103, .T. ) ;
 //#73 = FACE_OUTER_BOUND ( 'NONE', #188, .T. ) ;
 FaceOuterBound FaceOuterBound::handle(string fileRow, map<string, string> dataMap) {
-    if (fileRow.find("FACE_OUTER_BOUND") == string::npos) {
+    if (fileRow.find("FACE_OUTER_BOUND") == string::npos && fileRow.find("FACE_BOUND") == string::npos) {
         cout << "本条" + fileRow + "不是FACE_OUTER_BOUND，请检查文件格式" << endl;
         getchar();
         exit(0);
@@ -44,16 +45,13 @@ AdvancedFace AdvancedFace::handle(string fileRow, map<string, string> dataMap) {
     if (name == "NONE") {
         name = "";
     }
-    tempSplitVec[1] = tempSplitVec[1].substr(1, tempSplitVec[1].length());
-    tempSplitVec[tempSplitVec.size() - 3] = tempSplitVec[tempSplitVec.size() - 3]
-            .substr(0, tempSplitVec[tempSplitVec.size() - 3].length() - 1);
+    tempSplitVec[1] = util.clearSelectedChar(tempSplitVec[1], '(');
+    tempSplitVec[tempSplitVec.size() - 3] = util.clearSelectedChar(tempSplitVec[tempSplitVec.size() - 3], ')');
     vector<FaceOuterBound> boundVector;
     for (int i = 1; i <= tempSplitVec.size() - 3; i++) {
         boundVector.push_back(FaceOuterBound::handle(dataMap.find(tempSplitVec[i])->second, dataMap));
     }
-    // 暂时用plane代替
-    Plane plane = Plane::handle(dataMap.find(tempSplitVec[tempSplitVec.size() - 2])->second, dataMap);
-    tempSplitVec[tempSplitVec.size() - 1] = tempSplitVec[tempSplitVec.size() - 1][1];
-    bool isTheSameDir = tempSplitVec[tempSplitVec.size() - 1] == "T";
-    return {name, boundVector, plane, isTheSameDir};
+    SurfacePointer surface = SurfacePointer::handle(dataMap.find(tempSplitVec[tempSplitVec.size() - 2])->second, dataMap);
+    bool isTheSameDir = tempSplitVec[tempSplitVec.size() - 1].find('F') == string::npos;
+    return {name, boundVector, surface, isTheSameDir};
 }

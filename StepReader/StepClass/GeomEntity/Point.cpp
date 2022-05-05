@@ -4,6 +4,7 @@
 
 #include "Point.h"
 
+int CartesianPoint::num = 0;
 //#28 = CARTESIAN_POINT ( 'NONE',  ( -60.54135500900765300, 39.41482248636472000, 0.0000000000000000000 ) )
 CartesianPoint CartesianPoint::handle(string fileRow, map<string, string> dataMap) {
     if (fileRow.find("CARTESIAN_POINT") == string::npos) {
@@ -11,6 +12,8 @@ CartesianPoint CartesianPoint::handle(string fileRow, map<string, string> dataMa
         getchar();
         exit(0);
     }
+    cout << num++;
+    cout << ": 正在处理" + fileRow << endl;
     vector<string> tempSplitVec;
     Util util;
     util.split(fileRow, tempSplitVec, ',');
@@ -28,3 +31,4 @@ CartesianPoint CartesianPoint::handle(string fileRow, map<string, string> dataMa
     CartesianPoint cartesianPoint(name, x, y, z);
     return cartesianPoint;
 }
+

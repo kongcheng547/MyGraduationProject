@@ -8,6 +8,7 @@
 #include "../SuperEntity.h"
 #include "Vertex.h"
 #include "../GeomEntity/Curve.h"
+#include "GeomPointer.h"
 
 class Edge : public TopologicalRepresentationItem {
 public:
@@ -17,13 +18,12 @@ public:
 class EdgeCurve : public Edge {
 public:
     VertexPoint startPoint, endPoint;
-    Line line;
+    CurvePointer curve;
     bool isTheSameDir;
-    // TODO:暂时先全都用line代替，后面记得要改
-    EdgeCurve(string name, VertexPoint start, VertexPoint end, Line line, bool isTheSame) : Edge(name),
+    EdgeCurve(string name, VertexPoint start, VertexPoint end, CurvePointer curve, bool isTheSame) : Edge(name),
                                                                                                startPoint(start),
                                                                                                endPoint(end),
-                                                                                               line(line) {
+                                                                                               curve(curve) {
         this->isTheSameDir = isTheSame;
     }
 

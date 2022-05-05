@@ -13,6 +13,7 @@ class Curve : public GeometricRepresentationItem {
 public:
     Curve(string name) : GeometricRepresentationItem(name) {}
 
+    virtual void getName() {}
 };
 
 class Line : public Curve {
@@ -39,7 +40,7 @@ public:
     double radius;
 
     Circle(string name, Axis2Placement3D position, double radius) : Conic(name, position), radius(radius) {}
-
+    void getName() {}
     static Circle handle(string fileRow, map<string, string> dataMap);
 };
 

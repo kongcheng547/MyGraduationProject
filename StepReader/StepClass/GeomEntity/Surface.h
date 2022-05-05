@@ -13,6 +13,8 @@
 class Surface : public GeometricRepresentationItem {
 public:
     Surface(string name) : GeometricRepresentationItem(name) {}
+
+    virtual void getName() {}
 };
 
 class ElementarySurface : public Surface {

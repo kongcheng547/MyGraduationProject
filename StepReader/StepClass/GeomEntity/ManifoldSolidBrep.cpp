@@ -21,7 +21,7 @@ ManifoldSolidBrep ManifoldSolidBrep::handle(string fileRow, map<string, string> 
     if (name == "NONE") {
         name = "";
     }
-    tempSplitVec[1] = tempSplitVec[1].substr(0, tempSplitVec[1].length() - 1);
+    tempSplitVec[1] = util.clearSelectedChar(tempSplitVec[1],')');
     ClosedShell closedShell = ClosedShell::handle(dataMap.find(tempSplitVec[1])->second, dataMap);
     return {name, closedShell};
 }

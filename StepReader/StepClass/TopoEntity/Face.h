@@ -29,13 +29,13 @@ class AdvancedFace : public Face {
 public:
     vector<FaceOuterBound> boundVector;
     // TODO: 暂时用plane作为基础进行编写
-    Plane face;
+    SurfacePointer face;
     bool isTheSameDir;
 
     AdvancedFace(string name, vector<FaceOuterBound> boundVector1,
-                 Plane face1, bool isTheSame) : Face(name),
+                 SurfacePointer face, bool isTheSame) : Face(name),
                                                   boundVector(boundVector1),
-                                                  face(face1),
+                                                  face(face),
                                                   isTheSameDir(isTheSame) {}
     static AdvancedFace handle(string fileRow, map<string, string> dataMap);
 };

@@ -21,16 +21,15 @@ EdgeCurve EdgeCurve::handle(string fileRow, map<string, string> dataMap) {
     if (name == "NONE") {
         name = "";
     }
-    tempSplitVec[4] = tempSplitVec[4][1];
     VertexPoint startPoint = VertexPoint::handle(dataMap.find(tempSplitVec[1])->second, dataMap);
     VertexPoint endPoint = VertexPoint::handle(dataMap.find(tempSplitVec[2])->second, dataMap);
-    Line curve = Line::handle(dataMap.find(tempSplitVec[3])->second, dataMap);
-    bool isTheSameDir = tempSplitVec[4] == "T";
+    CurvePointer curve = CurvePointer::handle(dataMap.find(tempSplitVec[3])->second, dataMap);
+    bool isTheSameDir = tempSplitVec[4].find('F') == string::npos;
     return {name, startPoint, endPoint, curve, isTheSameDir};
 }
 
 //#159 = ORIENTED_EDGE ( 'NONE', *, *, #175, .F. ) ;
-// TODO: 目前暂时当做是只有一个edge_curve组成 后续需要更改
+// TODO: 目前暂时当做是只有一个edge_curve组成 后续需要更改 两个星号暂时没有找到其具体含义
 OrientedEdge OrientedEdge::handle(string fileRow, map<string, string> dataMap) {
     if (fileRow.find("ORIENTED_EDGE") == string::npos) {
         cout << "本条" + fileRow + "不是ORIENTED_EDGE，请检查文件格式" << endl;
@@ -47,8 +46,7 @@ OrientedEdge OrientedEdge::handle(string fileRow, map<string, string> dataMap) {
     if (name == "NONE") {
         name = "";
     }
-    tempSplitVec[4] = tempSplitVec[4][1];
     EdgeCurve edgeCurve = EdgeCurve::handle(dataMap.find(tempSplitVec[3])->second, dataMap);
-    bool isTheSameDir = tempSplitVec[4] == "T";
+    bool isTheSameDir = tempSplitVec[4].find('F') == string::npos;
     return {name, edgeCurve, isTheSameDir};
 }
