@@ -20,6 +20,7 @@ public:
 //    ~CurvePointer();
     CurvePointer() {}
     static CurvePointer handle(string fileRow, map<string, string> dataMap);
+    void DrawToObj(ofstream &outFile);
 };
 
 class SurfacePointer {
@@ -31,6 +32,7 @@ public:
     SurfacePointer() {}
 
     static SurfacePointer handle(string fileRow, map<string, string> dataMap);
+    void DrawToObj(ofstream &outFile);
 };
 
 

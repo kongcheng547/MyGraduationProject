@@ -30,3 +30,9 @@ ClosedShell ClosedShell::handle(string fileRow, map<string, string> dataMap) {
     }
     return {name, faceVector};
 }
+
+void ClosedShell::DrawToObj(ofstream &outFile) {
+    for (int i = 0; i < this->faceVector.size(); i++) {
+        this->faceVector[i].DrawToObj(outFile);
+    }
+}

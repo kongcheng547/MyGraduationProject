@@ -32,6 +32,10 @@ public:
     static CartesianPoint handle(string fileRow, map<string, string> dataMap);
     static int num;
 
+    bool operator< (const CartesianPoint point)const
+    {
+       return this->x > point.x ? true : (this->x < point.x ? false : (this->y > point.y ? true : (this->y < point.y ? false : (this->z > point.z))));
+    }
 };
 
 //（曲线上的点）

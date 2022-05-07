@@ -29,6 +29,7 @@ public:
     Plane(string name, Axis2Placement3D position) : ElementarySurface(name, position) {}
 
     static Plane handle(string fileRow, map<string, string> dataMap);
+    void DrawToObj(ofstream &outFile);
 };
 
 // 圆柱面

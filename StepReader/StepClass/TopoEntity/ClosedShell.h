@@ -14,6 +14,8 @@ public:
     ClosedShell(string name, vector<AdvancedFace> faceVector1) : TopologicalRepresentationItem(name), faceVector(faceVector1) {}
 
     static ClosedShell handle(string fileRow, map<string, string> dataMap);
+
+    void DrawToObj(ofstream &outFile);
 };
 
 

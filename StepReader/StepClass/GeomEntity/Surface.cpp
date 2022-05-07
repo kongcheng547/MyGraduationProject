@@ -26,6 +26,11 @@ Plane Plane::handle(string fileRow, map<string, string> dataMap) {
     return {name, axis2Placement3D};
 }
 
+void Plane::DrawToObj(ofstream &outFile) {
+
+
+}
+
 //#72349=CYLINDRICAL_SURFACE('',#534452,32.5);
 CylindricalSurface CylindricalSurface::handle(string fileRow, map<string, string> dataMap) {
     if (fileRow.find("CYLINDRICAL_SURFACE") == string::npos) {

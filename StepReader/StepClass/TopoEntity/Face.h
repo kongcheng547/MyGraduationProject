@@ -28,7 +28,6 @@ public:
 class AdvancedFace : public Face {
 public:
     vector<FaceOuterBound> boundVector;
-    // TODO: 暂时用plane作为基础进行编写
     SurfacePointer face;
     bool isTheSameDir;
 
@@ -38,6 +37,7 @@ public:
                                                   face(face),
                                                   isTheSameDir(isTheSame) {}
     static AdvancedFace handle(string fileRow, map<string, string> dataMap);
+    void DrawToObj(ofstream &outFile);
 };
 
 class FaceSurface : public Face {

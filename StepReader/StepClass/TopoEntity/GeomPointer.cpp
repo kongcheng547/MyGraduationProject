@@ -76,10 +76,14 @@ CurvePointer CurvePointer::handle(string fileRow, map<string, string> dataMap) {
         curvePointer.curveType = type;
         return curvePointer;
     } else {
-        cout << "±¾Ìõ" + fileRow + "²»ÊôÓÚ±¾³ÌÐòËùÄÜ½âÎöµÄÇúÏß£¬Çë¼ì²é¸ñÊ½" << endl;
+        cout << "æœ¬æ¡" + fileRow + "ä¸æ˜¯æœ¬ç¨‹åºå¯ä»¥å¤„ç†çš„æ›²çº¿" << endl;
         exit(0);
         getchar();
     }
+}
+
+void CurvePointer::DrawToObj(ofstream &outFile) {
+
 }
 
 SurfacePointer SurfacePointer::handle(string fileRow, map<string, string> dataMap) {
@@ -140,8 +144,15 @@ SurfacePointer SurfacePointer::handle(string fileRow, map<string, string> dataMa
         surfacePointer.surfaceType = "B_SPLINE_SURFACE";
         return surfacePointer;
     } else {
-        cout << "±¾Ìõ" + fileRow + "²»ÊôÓÚ±¾³ÌÐòËùÄÜ½âÎöµÄÇúÃæ£¬Çë¼ì²é¸ñÊ½" << endl;
+        cout << "æœ¬æ¡" + fileRow + "ä¸æ˜¯æœ¬ç¨‹åºå¯ä»¥å¤„ç†çš„æ›²é¢ï¼Œè¯·æ£€æŸ¥æ ¼å¼" << endl;
         exit(0);
         getchar();
+    }
+}
+
+void SurfacePointer::DrawToObj(ofstream &outFile) {
+    if (this->surfaceType == "PLANE") {
+        auto *surface = dynamic_cast<Plane*>(this->surface);
+        surface->DrawToObj(outFile);
     }
 }

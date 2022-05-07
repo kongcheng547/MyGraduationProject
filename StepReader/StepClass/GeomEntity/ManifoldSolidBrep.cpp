@@ -25,3 +25,7 @@ ManifoldSolidBrep ManifoldSolidBrep::handle(string fileRow, map<string, string> 
     ClosedShell closedShell = ClosedShell::handle(dataMap.find(tempSplitVec[1])->second, dataMap);
     return {name, closedShell};
 }
+
+void ManifoldSolidBrep::DrawToObj(ofstream &outFile) {
+    this->closedShell.DrawToObj(outFile);
+}
