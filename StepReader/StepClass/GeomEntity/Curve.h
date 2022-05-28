@@ -104,19 +104,20 @@ class Polyline : public BoundedCurve {
 
 class BSplineCurve : public BoundedCurve {
 public:
-    int degree;
-    vector<CartesianPoint> controlPointsList;
-    string curveForm;
-    bool isClosedCurve, isSelfIntersect;
+    int degree; // 度数
+    vector<CartesianPoint> controlPointsList; //控制点列表
+    string curveForm; // 曲线形式声明
+    bool isClosedCurve, isSelfIntersect; // 是否闭合，是否自交
 
-    BSplineCurve(string name) : BoundedCurve(name) {}
+    BSplineCurve(string name) : BoundedCurve(name) {}   // 空构造函数
 
+    // 常用构造函数
     BSplineCurve(string name, int degree, vector<CartesianPoint> controlPointsList, string curveForm,
                  bool isClosedCurve, bool isSelfIntersect) : BoundedCurve(name), degree(degree),
                                                              controlPointsList(controlPointsList),
                                                              curveForm(curveForm), isClosedCurve(isClosedCurve),
                                                              isSelfIntersect(isSelfIntersect) {}
-
+    // 拷贝构造函数
     BSplineCurve(string name, BSplineCurve bSplineCurve) : BoundedCurve(name) {
         this->degree = bSplineCurve.degree;
         this->controlPointsList = bSplineCurve.controlPointsList;
@@ -125,6 +126,7 @@ public:
         this->isSelfIntersect = bSplineCurve.isSelfIntersect;
     }
 
+    // handle函数
     static BSplineCurve handle(string fileRow, map<string, string> dataMap);
 
 };

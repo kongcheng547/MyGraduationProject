@@ -280,12 +280,13 @@ RationalBSplineSurface RationalBSplineSurface::handle(string fileRow, map<string
 //( 0.0000000000000000000, 1.000000000000000000 ),
 //.UNSPECIFIED. )
 //GEOMETRIC_REPRESENTATION_ITEM ( )  RATIONAL_B_SPLINE_SURFACE ( (
-//( 1.000000000000000000, 0.8471650420171683571, 0.8471650420171683571, 1.000000000000000000),
-//( 0.8128932001777970928, 0.6886547020840939615, 0.6886547020840939615, 0.8128932001777970928),
-//( 0.8128932001777970928, 0.6886547020840939615, 0.6886547020840939615, 0.8128932001777970928),
-//( 1.000000000000000000, 0.8471650420171683571, 0.8471650420171683571, 1.000000000000000000) ) )
+//( 1.00, 0.84, 0.84, 1.00),
+//( 0.81, 0.68, 0.68, 0.81),
+//( 0.81, 0.68, 0.68, 0.81),
+//( 1.00, 0.84, 0.84, 1.00) ) )
 //REPRESENTATION_ITEM ( '' )  SURFACE ( )  );
 BSplineSurfaceSet BSplineSurfaceSet::handle(string fileRow, map<string, string> dataMap) {
+    // 需要根据本行是否都含有这些东西来判断是不是一个B样条曲面集合
     if (fileRow.find("RATIONAL_B_SPLINE_SURFACE") == string::npos && fileRow.find("B_SPLINE_SURFACE") == string::npos
         && fileRow.find("B_SPLINE_SURFACE_WITH_KNOTS") == string::npos) {
         cout << "本条" + fileRow + "不是BSplineSurfaceSet，请检查文件格式" << endl;
@@ -294,16 +295,18 @@ BSplineSurfaceSet BSplineSurfaceSet::handle(string fileRow, map<string, string> 
     }
     vector<string> tempSplitVec;
     Util util;
-//    util.split(fileRow, tempSplitVec, ',');
+    // 找到字符串里面所有匹配的括号并且返回它们的下标
     vector<vector<int>> bracketsVec = util.findBracketsVec(fileRow);
     vector<string> fileString;
-    // 获得括号里面的字符串
+    // 获得每一对括号里面的字符串
     for (int i = 0; i < bracketsVec.size(); i++) {
         fileString.push_back(fileRow.substr(bracketsVec[i][0], bracketsVec[i][1]));
     }
+    // 找到这三个字符串的索引
     int surfaceLoc = fileRow.find("B_SPLINE_SURFACE"), knotsLoc = fileRow.find("B_SPLINE_SURFACE_WITH_KNOTS");
     int rationalSurfLoc = fileRow.find("RATIONAL_B_SPLINE_SURFACE");
     int surfaceIndex = 0, knotIndex = 0, rationalIndex = 0;
+    // 和三个字符串的下标最接近的其右边的括号就是里面包含的内容
     for (int i = 0; i < bracketsVec.size() - 1; i++) {
         if (bracketsVec[i][0] < surfaceLoc && bracketsVec[i + 1][0] > surfaceLoc) {
             fileString[i + 1] = "B_SPLINE_SURFACE" + fileString[i + 1];
@@ -318,14 +321,18 @@ BSplineSurfaceSet BSplineSurfaceSet::handle(string fileRow, map<string, string> 
             rationalIndex = i + 1;
         }
     }
+    // 如果没有找到完整的三个类型，那么格式有问题，结束程序
     if (surfaceIndex == 0 || knotIndex == 0 || rationalIndex == 0) {
         cout << fileRow + "未全部包含三个基础类型，请检查格式" << endl;
         getchar();
         exit(0);
     }
+    // 获得名字
     string name = fileString[fileString.size() - 2] == "''" ? "" : fileString[fileString.size() - 2].substr(1, fileString[fileString.size() - 2].length() - 2);
+    // 分别调用B样条曲面等三个类的handle()函数并且将前面获得的相应行传入
     BSplineSurface bSplineSurface = BSplineSurface::handle(fileString[surfaceIndex], dataMap);
     BSplineSurfaceWithKnots bSplineSurfaceWithKnots = BSplineSurfaceWithKnots::handle(fileString[knotIndex], dataMap);
     RationalBSplineSurface rationalBSplineSurface = RationalBSplineSurface::handle(fileString[rationalIndex], dataMap);
+    // 获得相应数据之后调用构造函数返回一个对象
     return {name, bSplineSurface, bSplineSurfaceWithKnots, rationalBSplineSurface};
 }

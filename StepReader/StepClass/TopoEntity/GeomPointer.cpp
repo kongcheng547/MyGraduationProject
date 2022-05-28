@@ -4,11 +4,6 @@
 
 #include "GeomPointer.h"
 
-//CurvePointer::~CurvePointer() {
-//    delete curve;
-//    curve = NULL;
-//}
-
 CurvePointer CurvePointer::handle(string fileRow, map<string, string> dataMap) {
     if (fileRow.find("RATIONAL_B_SPLINE_CURVE") != string::npos
         && fileRow.find("B_SPLINE_CURVE") != string::npos

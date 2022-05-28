@@ -59,13 +59,16 @@ AdvancedFace AdvancedFace::handle(string fileRow, map<string, string> dataMap) {
 
 void AdvancedFace::DrawToObj(ofstream &outFile) {
     if (this->face.surfaceType == "PLANE") {
+        // 边界是起点和终点，里面点可能被重复使用，所以要用set集合去重
         set<CartesianPoint> pointSet;
         for (int i = 0; i < this->boundVector.size(); i++) {
             for (int j = 0; j < this->boundVector[i].edgeLoop.orientedEdgeVector.size(); j++) {
+                // 对每一个边界找到它的起点，如果不存在集合中就加进去
                 CartesianPoint tempPoint = this->boundVector[i].edgeLoop.orientedEdgeVector[j].edgeCurve.startPoint.locPoint;
                 if (pointSet.find(tempPoint) == pointSet.end()) {
                     pointSet.insert(tempPoint);
                 }
+                // 对每一个边界找到它的终点，如果不存在集合中就加进去
                 tempPoint = this->boundVector[i].edgeLoop.orientedEdgeVector[j].edgeCurve.endPoint.locPoint;
                 if (pointSet.find(tempPoint) == pointSet.end()) {
                     pointSet.insert(tempPoint);
@@ -73,8 +76,10 @@ void AdvancedFace::DrawToObj(ofstream &outFile) {
             }
         }
         vector<CartesianPoint> sortVec;
+        // 将点放入vector方便后续操作
         sortVec.assign(pointSet.begin(), pointSet.end());
-        // 选择离前一个最近的节点作为连接
+        // 选择离前一个最近的节点作为连接 因为obj文件中连接顺序不对会导致面绘制错误
+        // 用了选择排序的方法，总是找到离当前节点最近的一个点作为下一个点
         for (int i = 0; i < sortVec.size() - 1; i++) {
             double minDistance = 1000000000;
             int index = i + 1;
@@ -90,13 +95,67 @@ void AdvancedFace::DrawToObj(ofstream &outFile) {
             sortVec[i + 1] = sortVec[index];
             sortVec[index] = temp;
         }
+        // 输出到obj文件中
         for (int i = 0; i < sortVec.size(); i++) {
             outFile << "v " << sortVec[i].x << ' ' << sortVec[i].y << ' ' << sortVec[i].z << endl;
         }
+        // 输出面的定义
         outFile << "f";
         for (int i = pointSet.size(); i >= 1; i--) {
             outFile << ' ' + to_string(-i);
         }
         outFile << endl;
+    } else if (this->face.surfaceType == "CYLINDRICAL_SURFACE") {
+        DrawUtil drawUtil;
+        vector<vector<double>> circle1, circle2;
+        vector<OrientedEdge> orientedVec = this->boundVector[0].edgeLoop.orientedEdgeVector;
+        int index = -1;
+        for (int i = 0; i < orientedVec.size(); i++) {
+            if (orientedVec[i].edgeCurve.curve.curveType == "CIRCLE") {
+                index = i;
+                break;
+            }
+        }
+        if (index == -1) {
+            return ;
+        }
+        Circle *c1 = dynamic_cast<Circle*>(orientedVec[index].edgeCurve.curve.curve);
+        double norm1[] = {c1->position.normal.x, c1->position.normal.y, c1->position.normal.z};
+        circle1 = drawUtil.handleCircle(c1, 1);
+        index = 0;
+        for (int i = orientedVec.size() - 1; i >= 1; i--) {
+            if (orientedVec[i].edgeCurve.curve.curveType == "CIRCLE") {
+                index = i;
+                break;
+            }
+        }
+        if (index == 0 || orientedVec[index].edgeCurve.curve.curveType != "CIRCLE") {
+            return ;
+        }
+        Circle *c2 = dynamic_cast<Circle*>(orientedVec[index].edgeCurve.curve.curve);
+        double norm2[] = {c2->position.normal.x, c2->position.normal.y, c2->position.normal.z};
+        int normNum = (norm1[0] * norm2[0] + norm1[1] * norm2[1] + norm1[2] * norm2[2]) > 0 ? 1 : -1;
+        circle2 = drawUtil.handleCircle(c2, normNum);
+        for (int i = 0; i < circle1.size(); i++) {
+            outFile << "v " << circle1[i][0] << ' ' << circle1[i][1] << ' ' << circle1[i][2] << endl;
+        }
+        for (int i = 0; i < circle2.size(); i++) {
+            outFile << "v " << circle2[i][0] << ' ' << circle2[i][1] << ' ' << circle2[i][2] << endl;
+        }
+        int size1 = circle1.size(), size2 = circle2.size();
+        int center1 = -(size1 + size2), center2 = -size2;
+        for (int i = 1; i < size1 - 1; i++) {
+            outFile << "f " << center1 << " " << center1 + i << " " << center1 + i + 1 << endl;
+        }
+        outFile << "f " << center1 << " " << center1 + size1 - 1 << " " << center1 + 1 << endl;
+        for (int i = 1; i < size2 - 1; i++) {
+            outFile << "f " << center2 << " " << center2 + i << " " << center2 + i + 1 << endl;
+        }
+        outFile << "f " << center2 << " " << center2 + size2 - 1 << " " << center2 + 1 << endl;
+
+        for (int i = 1; i < size1 - 1; i++) {
+            outFile << "f " << center1 + i << " " << center2 + i << ' ' << center2 + i + 1 << ' ' << center1 + i + 1 << endl;
+        }
+        outFile << "f " << center2 - 1 << " " << -1 << ' ' << center2 + 1 << ' ' << center1 + 1 << endl;
     }
 }

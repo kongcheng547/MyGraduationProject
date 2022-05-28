@@ -13,7 +13,8 @@ CartesianPoint CartesianPoint::handle(string fileRow, map<string, string> dataMa
         exit(0);
     }
     if ((num <=10) || (num <= 100 && num % 10 == 0) || (num <= 1000 && num % 100 == 0) || (num >= 1000 && num % 1000 == 0)) {
-        cout << "正在处理第" + to_string(num++) +"个笛卡尔点" << endl;
+        cout << "正在处理第" + to_string(num++) + "个笛卡尔点" << endl;
+//        cout << "正在处理第" + to_string(num++) +"个笛卡尔点" << endl;
     }
     vector<string> tempSplitVec;
     Util util;

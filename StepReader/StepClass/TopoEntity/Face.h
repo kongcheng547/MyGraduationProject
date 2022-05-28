@@ -9,6 +9,7 @@
 #include "Edge.h"
 #include "Loop.h"
 #include "../GeomEntity/Surface.h"
+#include "../../DrawObj/DrawUtil.h"
 
 class Face : public TopologicalRepresentationItem {
 public:

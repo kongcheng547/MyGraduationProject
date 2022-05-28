@@ -1,5 +1,6 @@
 #include <iostream>
 #include "string"
+#include "math.h"
 #include "ReadFile/StepFile.h"
 #include "StepClass/SuperEntity.h"
 #include "StepClass/GeomEntity/Point.h"
@@ -12,10 +13,11 @@ using namespace std;
 int main() {
     clock_t startTime,endTime;
     startTime = clock();//计时开始
-    string fileName = "cube";
+    string fileName = "man";
 //    string filePath = "../src/car.STEP";
     string filePath = "../src/" + fileName + ".STEP";
 //    string filePath = "../src/coupler.STEP";//扫描曲面surface_of_revolution待处理
+    // chair的SURFACE_CURVE待处理
     StepFile stepFile;
     stepFile.readFile(filePath);
     stepFile.handleData();
@@ -28,7 +30,6 @@ int main() {
     cout << "分钟是:" << (double)(endTime - startTime) / CLOCKS_PER_SEC / 60 << "min" << endl;
 
     ofstream outFile("../output/" + fileName + ".obj");
-//    outFile << "#1111156565" << endl;
     for (int i = 0; i < stepFile.manifoldSolidBrepVec.size(); i++) {
         stepFile.manifoldSolidBrepVec[i].DrawToObj(outFile);
     }

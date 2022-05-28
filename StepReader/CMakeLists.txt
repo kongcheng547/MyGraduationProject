@@ -12,4 +12,4 @@ add_executable(StepReader main.cpp
         StepClass/TopoEntity/Edge.h StepClass/TopoEntity/Loop.cpp StepClass/TopoEntity/Loop.h
         StepClass/TopoEntity/Face.cpp StepClass/TopoEntity/Face.h StepClass/TopoEntity/ClosedShell.cpp
         StepClass/TopoEntity/ClosedShell.h ReadFile/FileReader.cpp ReadFile/FileReader.h ReadFile/StepFile.cpp
-        ReadFile/StepFile.h Util/Util.cpp Util/Util.h StepClass/GeomEntity/MiddleGeom.cpp StepClass/GeomEntity/MiddleGeom.h StepClass/TopoEntity/GeomPointer.cpp StepClass/TopoEntity/GeomPointer.h)
+        ReadFile/StepFile.h Util/Util.cpp Util/Util.h StepClass/GeomEntity/MiddleGeom.cpp StepClass/GeomEntity/MiddleGeom.h StepClass/TopoEntity/GeomPointer.cpp StepClass/TopoEntity/GeomPointer.h DrawObj/DrawUtil.cpp DrawObj/DrawUtil.h)

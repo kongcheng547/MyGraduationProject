@@ -17,9 +17,9 @@ public:
 
 class EdgeCurve : public Edge {
 public:
-    VertexPoint startPoint, endPoint;
-    CurvePointer curve;
-    bool isTheSameDir;
+    VertexPoint startPoint, endPoint;   // 起点和终点
+    CurvePointer curve; // 几何曲线
+    bool isTheSameDir;  // 最后结果是否和几何曲线方向一致
     EdgeCurve(string name, VertexPoint start, VertexPoint end, CurvePointer curve, bool isTheSame) : Edge(name),
                                                                                                startPoint(start),
                                                                                                endPoint(end),
