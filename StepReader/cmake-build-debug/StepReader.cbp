@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="StepReader"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="StepReader">
+				<Option output="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/StepReader.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 StepReader"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="StepReader/fast">
+				<Option output="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/StepReader.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/11/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 StepReader/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/Language/C++/MyGraduationProject/StepReader/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/DrawObj/DrawUtil.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/DrawObj/DrawUtil.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/ReadFile/FileReader.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/ReadFile/FileReader.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/ReadFile/StepFile.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/ReadFile/StepFile.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/GeomEntity/Curve.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/GeomEntity/Curve.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/GeomEntity/ManifoldSolidBrep.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/GeomEntity/ManifoldSolidBrep.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/GeomEntity/MiddleGeom.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/GeomEntity/MiddleGeom.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/GeomEntity/Point.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/GeomEntity/Point.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/GeomEntity/Surface.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/GeomEntity/Surface.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/SuperEntity.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/SuperEntity.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/TopoEntity/ClosedShell.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/TopoEntity/ClosedShell.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/TopoEntity/Edge.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/TopoEntity/Edge.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/TopoEntity/Face.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/TopoEntity/Face.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/TopoEntity/GeomPointer.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/TopoEntity/GeomPointer.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/TopoEntity/Loop.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/TopoEntity/Loop.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/TopoEntity/Vertex.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/StepClass/TopoEntity/Vertex.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/Util/Util.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/Util/Util.h">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/main.cpp">
+			<Option target="StepReader"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Language/C++/MyGraduationProject/StepReader/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

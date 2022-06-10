@@ -1,0 +1,64 @@
+NIST STEP File Analyzer and Viewer 4.72 (Sat May 21 15:46:49 CST 2022)
+
+Opening STEP AP214 file
+ 7599 entities
+ 
+Generating Header worksheet
+Name:  man
+FileDirectory:  D:\Language\C++\MyGraduationProject\StepReader\src\
+FileDescription:  STEP AP214
+FileImplementationLevel:  1
+ ** FileImplementationLevel is usually '2;1'.  See Header worksheet.  [addHeaderWorksheet]
+FileTimeStamp:  2022-04-27T19:36:54
+FileAuthor:  
+FileOrganization:  
+FilePreprocessorVersion:  SwSTEP 2.0
+FileOriginatingSystem:  SolidWorks 2021
+FileAuthorisation:  
+SchemaName:  AUTOMOTIVE_DESIGN
+ 
+Generating STEP Entity worksheets
+colour_rgb (61)
+fill_area_style (61)
+fill_area_style_colour (61)
+presentation_layer_assignment (61)
+presentation_style_assignment (61)
+styled_item (61)
+surface_side_style (61)
+surface_style_fill_area (61)
+surface_style_usage (61)
+advanced_brep_shape_representation (1)
+(geometric_representation_context)(global_uncertainty_assigned_context)(global_unit_assigned_context) (62)
+mechanical_design_geometric_presentation_representation (61)
+shape_definition_representation (1)
+application_context (2)
+application_protocol_definition (2)
+product (1)
+product_context (1)
+product_definition (1)
+product_definition_context (1)
+product_definition_formation_with_specified_source (1)
+product_definition_shape (1)
+product_related_product_category (1)
+(length_unit)(si_unit) (62)
+(plane_angle_unit)(si_unit) (62)
+(si_unit)(solid_angle_unit) (62)
+uncertainty_measure_with_unit (62)
+ Writing Viewer file to: D:\Language\C++\MyGraduationProject\StepReader\src\man-sfa.html
+ **  Copying Viewer software for part geometry (stp2x3d-part.exe) to C:\Users\kongcheng547\AppData\Local\Temp\SFA
+ Processing STEP part geometry
+ Processing X3D output
+
+Generating Summary worksheet
+Formatting Worksheets
+Processing time: 12.0 seconds
+ 
+Saving Spreadsheet to:
+ D:\Language\C++\MyGraduationProject\StepReader\src\man-sfa.xlsx
+
+Opening Spreadsheet: man-sfa.xlsx
+
+Opening Viewer file: man-sfa.html (377 KB)
+
+Saving Log file to:
+ D:\Language\C++\MyGraduationProject\StepReader\src\man-sfa.log

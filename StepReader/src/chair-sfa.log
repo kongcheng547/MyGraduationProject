@@ -1,0 +1,72 @@
+NIST STEP File Analyzer and Viewer 4.72 (Sat May 21 15:47:57 CST 2022)
+
+Opening STEP AP214 file
+ 43560 entities
+ 
+Generating Header worksheet
+Name:  chair
+FileDirectory:  D:\Language\C++\MyGraduationProject\StepReader\src\
+FileDescription:  FreeCAD Model
+FileImplementationLevel:  2;1
+FileTimeStamp:  2022-04-21T22:55:38
+FileAuthor:  Author
+FileOrganization:  
+FilePreprocessorVersion:  Open CASCADE STEP processor 7.5
+FileOriginatingSystem:  FreeCAD
+FileAuthorisation:  Unknown
+SchemaName:  AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 } (Edition 1)
+ 
+Generating STEP Entity worksheets
+colour_rgb (2)
+curve_style (6)
+draughting_pre_defined_colour (2)
+draughting_pre_defined_curve_font (6)
+fill_area_style (6)
+fill_area_style_colour (6)
+presentation_style_assignment (6)
+styled_item (6)
+surface_side_style (6)
+surface_style_fill_area (6)
+surface_style_usage (6)
+advanced_brep_shape_representation (7)
+context_dependent_shape_representation (14)
+definitional_representation (1000 of 1250)
+ **  Maximum Rows (1000) exceeded (see Spreadsheet tab)
+(geometric_representation_context)(global_uncertainty_assigned_context)(global_unit_assigned_context) (8)
+(geometric_representation_context)(parametric_representation_context) (1000 of 1250)
+item_defined_transformation (14)
+mechanical_design_geometric_presentation_representation (6)
+(representation_relationship_with_transformation)(shape_representation_relationship) (14)
+shape_definition_representation (8)
+shape_representation (1)
+application_context (1)
+application_protocol_definition (1)
+next_assembly_usage_occurrence (14)
+product (8)
+product_context (8)
+product_definition (8)
+product_definition_context (8)
+product_definition_formation (8)
+product_definition_shape (22)
+product_related_product_category (8)
+(length_unit)(si_unit) (8)
+(plane_angle_unit)(si_unit) (8)
+(si_unit)(solid_angle_unit) (8)
+uncertainty_measure_with_unit (8)
+ Writing Viewer file to: D:\Language\C++\MyGraduationProject\StepReader\src\chair-sfa.html
+ Processing STEP part geometry
+ Processing X3D output
+
+Generating Summary worksheet
+Formatting Worksheets
+Processing time: 14.5 seconds
+ 
+Saving Spreadsheet to:
+ D:\Language\C++\MyGraduationProject\StepReader\src\chair-sfa.xlsx
+
+Opening Spreadsheet: chair-sfa.xlsx
+
+Opening Viewer file: chair-sfa.html (580 KB)
+
+Saving Log file to:
+ D:\Language\C++\MyGraduationProject\StepReader\src\chair-sfa.log

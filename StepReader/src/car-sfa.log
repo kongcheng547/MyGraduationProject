@@ -1,0 +1,64 @@
+NIST STEP File Analyzer and Viewer 4.72 (Thu May 05 15:51:31 CST 2022)
+
+Opening STEP AP214 file
+ 216811 entities
+ 
+Generating Header worksheet
+Name:  car
+FileDirectory:  D:\Language\C++\MyGraduationProject\StepReader\src\
+FileDescription:  STEP AP214
+FileImplementationLevel:  1
+ ** FileImplementationLevel is usually '2;1'.  See Header worksheet.  [addHeaderWorksheet]
+FileTimeStamp:  2022-04-17T13:27:39
+FileAuthor:  
+FileOrganization:  
+FilePreprocessorVersion:  SwSTEP 2.0
+FileOriginatingSystem:  SolidWorks 2020
+FileAuthorisation:  
+SchemaName:  AUTOMOTIVE_DESIGN
+ 
+Generating STEP Entity worksheets
+colour_rgb (25)
+fill_area_style (25)
+fill_area_style_colour (25)
+presentation_layer_assignment (25)
+presentation_style_assignment (25)
+styled_item (25)
+surface_side_style (25)
+surface_style_fill_area (25)
+surface_style_usage (25)
+advanced_brep_shape_representation (1)
+(geometric_representation_context)(global_uncertainty_assigned_context)(global_unit_assigned_context) (26)
+mechanical_design_geometric_presentation_representation (25)
+shape_definition_representation (1)
+application_context (2)
+application_protocol_definition (2)
+product (1)
+product_context (1)
+product_definition (1)
+product_definition_context (1)
+product_definition_formation_with_specified_source (1)
+product_definition_shape (1)
+product_related_product_category (1)
+(length_unit)(si_unit) (26)
+(plane_angle_unit)(si_unit) (26)
+(si_unit)(solid_angle_unit) (26)
+uncertainty_measure_with_unit (26)
+ Writing Viewer file to: D:\Language\C++\MyGraduationProject\StepReader\src\car-sfa.html
+ **  Copying Viewer software for part geometry (stp2x3d-part.exe) to C:\Users\kongcheng547\AppData\Local\Temp\SFA
+ Processing STEP part geometry, please wait.
+ Processing X3D output
+
+Generating Summary worksheet
+Formatting Worksheets
+Processing time: 30.3 seconds
+ 
+Saving Spreadsheet to:
+ D:\Language\C++\MyGraduationProject\StepReader\src\car-sfa.xlsx
+
+Opening Spreadsheet: car-sfa.xlsx
+
+Opening Viewer file: car-sfa.html (2836 KB)
+
+Saving Log file to:
+ D:\Language\C++\MyGraduationProject\StepReader\src\car-sfa.log

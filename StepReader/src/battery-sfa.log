@@ -1,0 +1,86 @@
+NIST STEP File Analyzer and Viewer 4.72 (Sat May 21 15:48:47 CST 2022)
+
+Opening STEP AP214 file
+ 1557 entities
+This file contains: Part geometry, Properties
+ 
+Generating Header worksheet
+Name:  battery
+FileDirectory:  D:\Language\C++\MyGraduationProject\StepReader\src\
+FileDescription:  STEP AP203
+FileImplementationLevel:  2;1
+FileTimeStamp:  2022-04-10T09:54:19+02:00
+FileAuthor:  Toshiba
+FileOrganization:  
+FilePreprocessorVersion:  ST-DEVELOPER v18.1
+FileOriginatingSystem:  Autodesk Inventor 2022
+FileAuthorisation:  
+SchemaName:  AUTOMOTIVE_DESIGN { 1 0 10303 214 3 1 1 } (Edition 3)
+ 
+Generating STEP Entity worksheets
+colour_rgb (3)
+fill_area_style (3)
+fill_area_style_colour (3)
+presentation_style_assignment (3)
+styled_item (11)
+surface_side_style (3)
+surface_style_fill_area (3)
+surface_style_rendering_with_properties (3)
+surface_style_transparent (3)
+surface_style_usage (3)
+advanced_brep_shape_representation (1)
+(geometric_representation_context)(global_uncertainty_assigned_context)(global_unit_assigned_context) (2)
+mechanical_design_geometric_presentation_representation (1)
+property_definition (2)
+property_definition_representation (2)
+ Adding Properties to property_definition worksheet
+*** Syntax Error: For mass units, '' is not a valid prefix for 'gram', only 'kilo' is allowed.
+***               (User Defined Attributes, Annex C.1)
+representation (2)
+shape_definition_representation (1)
+shape_representation (1)
+shape_representation_relationship (1)
+application_context (1)
+application_protocol_definition (1)
+applied_date_and_time_assignment (1)
+calendar_date (1)
+coordinated_universal_time_offset (1)
+date_and_time (1)
+date_time_role (1)
+local_time (1)
+product (1)
+product_context (1)
+product_definition (1)
+product_definition_context (1)
+product_definition_formation (1)
+product_definition_shape (1)
+product_related_product_category (1)
+derived_unit (1)
+derived_unit_element (2)
+descriptive_representation_item (1)
+(length_unit)(si_unit) (2)
+(mass_unit)(si_unit) (1)
+measure_representation_item (1)
+(plane_angle_unit)(si_unit) (1)
+(si_unit)(solid_angle_unit) (1)
+uncertainty_measure_with_unit (2)
+ Writing Viewer file to: D:\Language\C++\MyGraduationProject\StepReader\src\battery-sfa.html
+ Processing STEP part geometry
+ Processing X3D output
+
+Generating Summary worksheet
+Formatting Worksheets
+ property_definition
+ property_definition
+ (mass_unit)(si_unit)
+Processing time: 8.0 seconds
+ 
+Saving Spreadsheet to:
+ D:\Language\C++\MyGraduationProject\StepReader\src\battery-sfa.xlsx
+
+Opening Spreadsheet: battery-sfa.xlsx
+
+Opening Viewer file: battery-sfa.html (175 KB)
+
+Saving Log file to:
+ D:\Language\C++\MyGraduationProject\StepReader\src\battery-sfa.log

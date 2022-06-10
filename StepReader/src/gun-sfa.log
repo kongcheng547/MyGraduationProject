@@ -1,0 +1,80 @@
+NIST STEP File Analyzer and Viewer 4.72 (Sat May 21 15:49:55 CST 2022)
+
+Opening STEP AP203 file
+ 251197 entities
+ 
+Generating Header worksheet
+Name:  gun
+FileDirectory:  D:\Language\C++\MyGraduationProject\StepReader\src\
+FileDescription:  STEP AP203
+FileImplementationLevel:  1
+ ** FileImplementationLevel is usually '2;1'.  See Header worksheet.  [addHeaderWorksheet]
+FileTimeStamp:  2022-04-23T21:47:16
+FileAuthor:  FARO Preferred User
+FileOrganization:  Microsoft
+FilePreprocessorVersion:  SwSTEP 2.0
+FileOriginatingSystem:  SolidWorks 2004231
+FileAuthorisation:  
+SchemaName:  CONFIG_CONTROL_DESIGN
+ 
+Generating STEP Entity worksheets
+advanced_brep_shape_representation (49)
+context_dependent_shape_representation (52)
+(geometric_representation_context)(global_uncertainty_assigned_context)(global_unit_assigned_context) (51)
+item_defined_transformation (52)
+(representation_relationship_with_transformation)(shape_representation_relationship) (52)
+shape_definition_representation (51)
+shape_representation (51)
+shape_representation_relationship (49)
+application_context (102)
+application_protocol_definition (102)
+approval (205)
+approval_date_time (205)
+approval_person_organization (205)
+approval_role (205)
+approval_status (205)
+calendar_date (359)
+cc_design_approval (205)
+ **  Reporting cc_design_approval 'items' attribute is not supported.  '???' will appear in spreadsheet for this attribute.  See User Guide section 5.4
+cc_design_date_and_time_assignment (154)
+cc_design_person_and_organization_assignment (307)
+cc_design_security_classification (103)
+coordinated_universal_time_offset (359)
+date_and_time (359)
+date_time_role (154)
+design_context (51)
+local_time (359)
+mechanical_context (51)
+next_assembly_usage_occurrence (52)
+organization (53)
+person (53)
+person_and_organization (460)
+person_and_organization_role (307)
+product (51)
+product_definition (51)
+product_definition_formation_with_specified_source (51)
+product_definition_shape (103)
+product_related_product_category (51)
+security_classification (103)
+security_classification_level (103)
+(length_unit)(si_unit) (51)
+(plane_angle_unit)(si_unit) (51)
+(si_unit)(solid_angle_unit) (51)
+uncertainty_measure_with_unit (51)
+ Writing Viewer file to: D:\Language\C++\MyGraduationProject\StepReader\src\gun-sfa.html
+ Processing STEP part geometry, please wait.
+ Processing X3D output
+
+Generating Summary worksheet
+Formatting Worksheets
+Processing time: 42.3 seconds
+ 
+Saving Spreadsheet to:
+ D:\Language\C++\MyGraduationProject\StepReader\src\gun-sfa.xlsx
+
+Opening Spreadsheet: gun-sfa.xlsx
+
+Opening Viewer file: gun-sfa.html (10 MB)
+
+Saving Log file to:
+ D:\Language\C++\MyGraduationProject\StepReader\src\gun-sfa.log
