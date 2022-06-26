@@ -12,7 +12,8 @@ else {
     }
 ```
 
-根据提示，看清楚是哪一个面或者哪一个线，然后去https://ap238.org/SMRL_v8_final/data/resource_docs/geometric_and_topological_representation/sys/2_refs.htm或者找到STEP对应标准，看对应三维实体的数据结构，再在代码里面声明对应结构，根据已有的handle()处理模式，就可以对模型进行读取
+根据提示，看清楚是哪一个面或者哪一个线，然后去https://ap238.org/SMRL_v8_final/data/resource_docs/geometric_and_topological_representation/sys/2_refs.htm
+或者找到STEP对应标准，看对应三维实体的数据结构，再在代码里面声明对应结构，根据已有的handle()处理模式，就可以对模型进行读取
 
 ## 当前进展
 
